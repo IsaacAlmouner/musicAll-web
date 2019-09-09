@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo'
+import './layout/ArtistList.css'
 
 const getArtistsQuery = gql`
 {
@@ -18,7 +19,6 @@ const getArtistsQuery = gql`
       }
 }
 `
-
 export class ArtistList extends Component {
     displayArtists() {
         var data = this.props.data;
@@ -48,7 +48,7 @@ export class ArtistList extends Component {
     render() {
         console.log(this.props);
         return (
-            <div>
+            <div class="main" >
                 <ul id="artist-list">
                     {this.displayArtists()}
                 </ul>
