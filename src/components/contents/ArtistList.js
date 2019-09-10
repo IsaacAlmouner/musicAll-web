@@ -3,6 +3,7 @@ import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo'
 import './ArtistList.css'
 import '../../fonts/stylesheet.css'
+import { Link } from 'react-router-dom';
 const getArtistsQuery = gql`
 {
     allArtists{
@@ -20,9 +21,9 @@ export class ArtistList extends Component {
         } else {
             return (
                 <div class="grid-container" style={{ padding: " 0px", margin: "50px", marginTop: "150px", marginBottom: "100px" }} >
-                    {
-                        data.allArtists.map(artist => {
-                            return (
+                    {data.allArtists.map(artist => {
+                        return (
+                            <Link to={{ pathname: "/AlbumList", state: artist }} >
                                 <div key={artist.id}>
                                     <div class="container" >
                                         <img class="image" src={require('./' + artist.artistImage)} width="150px"
@@ -34,8 +35,9 @@ export class ArtistList extends Component {
                                     }}>
                                         {artist.artistName}</p>
                                 </div>
-                            );
-                        })
+                            </Link>
+                        );
+                    })
                     }
                 </div>
             );

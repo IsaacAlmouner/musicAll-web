@@ -1,7 +1,7 @@
 .flex-container-upper {
     background-image: linear-gradient(to bottom Right,  #cc0052, #990000, black);
     display: flex;
-    flex-wrap: nowwrap;
+    flex-wrap: nowrap;
     margin: 0px;
 }
   
