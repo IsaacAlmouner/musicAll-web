@@ -7,7 +7,7 @@ import '../../fonts/stylesheet.css';
 
 function Footer() {
     return (
-        <div style={{ background: "#0f0f0a", color: "#ffffff", paddingTop: "30px", paddingLeft: "50px"}}>
+        <div style={{ background: "#0f0f0a", color: "#ffffff", paddingTop: "30px", paddingLeft: "50px", height: "310px" }}>
             <div class="flex-container-column">
                 <div class="flex-container" >
                     <div><img src={Logo} width="100px"/></div>
